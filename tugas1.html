@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1</title>
+</head>
+<style>
+    .body{
+        background-color: rgb(83, 83, 81);
+    }
+    .container{
+        font-family: arial, Helvetica, sans-serif;
+        width: 900px;
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+    }
+    .navbar{ 
+        background-color: black;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar ul li{
+        display: inline-block;
+        margin-top: 10px;
+        margin-right: 40px;
+    }
+    .navbar a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 2px;
+    }
+    .navbar a:hover{
+        background-color: rgb(142, 142, 250);
+    }
+    .gambar{
+        height: 280px;
+        background-image: url(luffy.jpg);
+        background-position: 0 -30px;
+        margin-bottom: 20px;
+    }
+    .footer{
+        width: 100%;
+        background-color: black;
+        color: aliceblue;
+        text-align: center;
+        padding: 1px;
+    }
+    .content {
+        overflow: auto;
+    }
+    .main{
+        float: left;
+        width: 500px;
+        margin-left: 80px;
+        margin-right: 5px;
+        margin-bottom: 30px;
+        text-align: justify;
+    }
+    .sidebar{
+        float: right;
+        width: 250px;
+        height: 150px;
+        margin-right: 35px;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        padding-bottom: 67px;
+    }
+    .sidebar h4{
+        text-align: center;
+    }
+</style>
+<body class="body">
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="menu">Menu 1</a></li>
+                <li><a href="menu">Menu 2</a></li>
+                <li><a href="menu">Menu 3</a></li>
+                <li><a href="menu">Menu 4</a></li>
+            </ul>
+        </div>
+        <div class="gambar"></div>
+        
+        <div class="content">
+            <div class="main">
+                <h2>Judul</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis velit corporis porro illo odio. Nam atque ea aut distinctio reprehenderit iusto, ipsam voluptatem corporis itaque laborum sequi fugit error incidunt ad dolore vitae quod mollitia quo nesciunt soluta ducimus sapiente? Ducimus at quisquam quae in ad modi assumenda, ut magnam, sed omnis, odit delectus? Obcaecati, alias. Numquam quia esse odit?    </p>
+            </div>
+            <div class="sidebar">
+                <h4>Sidebar</h4>
+            </div>    
+        </div>
+
+        <div class="footer"><p class="cp">Ini adalah Irfan</p></div>
+    </div>
+</body>
+</html>
