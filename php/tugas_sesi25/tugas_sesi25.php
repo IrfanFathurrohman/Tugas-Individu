@@ -35,7 +35,7 @@ if ($nilai <= 59) {
     echo "$nilai merupakan Grade = A";
 } 
 else{
-    echo 'Nilai : ' . $nilai . ' Masukkan nilai dengan benar.';
+    echo "$nilai masukan nilai yang benar";
 }
 
 ?>
