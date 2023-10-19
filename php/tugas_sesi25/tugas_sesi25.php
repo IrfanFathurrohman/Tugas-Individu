@@ -4,7 +4,7 @@
 $bilangan=15;
 
 if ($bilangan % 2 == 0){
-    echo "$bilangan adalah bilangan genap";
+    echo "$bilangan adalah bilangan genap <br>";
 }else {
     echo "$bilangan adalah bilangan ganjil <br>";
 }
