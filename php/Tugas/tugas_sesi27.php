@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Irfan</title>
+	<title>Cara Membuat Looping For di dalam Tabel</title>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 
     <!-- table -->
 		<table border="1" cellspacing="0">
-			<tr>
+			<tr bgcolor="#00FFFF">
 				<th>NO</th>
 				<th>Nama</th>
 				<th>Kelas</th>
@@ -28,8 +28,14 @@
  
 		<?php
         for ($no = 1, $i=1, $a=10; $i<=10, $a>=1  ; $i++, $a--) { 
+			if($no % 2 == 0){
+           		$warna='#fff';
+			}
+			else{
+				$warna='#ccc';
+			}
         ?>
-			<tr>
+			<tr bgcolor= "<?php echo $warna ?>">
 				<td> <?php echo $no; ?></td>
 				<td><?php echo "Nama ke $i"; ?></td>
 				<td><?php echo $a; ?></td>
