@@ -3,10 +3,27 @@
 <head>
 	<title>Irfan</title>
 </head>
+<style>
+    body{
+        margin: 0;
+        margin-top: -14px;
+    }
+   table {
+    margin-top: 50px;
+   }
+   h1 {
+    font-size: 20px;
+    background-color: #FFD700;
+    padding-left: 30px;
+    padding: 10px;
+    align-items: center;
+   }
+</style>
 <body>
+    <h1>Daftar Nilai</h1>
 
     <!-- table -->
-		<table border="1" cellspacing="0">
+		<table border="1" cellspacing="0" align="center">
 			<tr>
 				<th>NO</th>
 				<th>Nama</th>
@@ -21,12 +38,21 @@
             <?php
             $data = file_get_contents("data.json");
             $students = json_decode($data);
-
+            $no = 1;
+            
+            
+                
             foreach ($students as $student){
+                if($no % 2 == 0){
+                    $warna='#fff';
+                }
+                else{
+                    $warna='#ccc';
+                }
             ?>
 
-            <tr>
-                <td><?php  ?></td>
+            <tr bgcolor= "<?php echo $warna ?>">
+                <td><?php echo $no;?></td>
                 <td>
                     <?php 
                         echo $student->nama;
@@ -78,7 +104,7 @@
                 </td>
                 
             </tr>
-            <?php }
+            <?php $no++;}
             ?>
  
 		</table>
