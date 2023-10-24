@@ -6,18 +6,26 @@
 <style>
     body{
         margin: 0;
-        margin-top: -14px;
+        padding: 0;
+        
     }
-   table {
-    margin-top: 50px;
-   }
-   h1 {
-    font-size: 20px;
-    background-color: #FFD700;
-    padding-left: 30px;
-    padding: 10px;
-    align-items: center;
-   }
+    table {
+        margin-top: 50px;
+    }
+    h1 {
+        margin: auto;
+        font-size: 20px;
+        background-color: #FFD700;
+        padding-left: 30px;
+        padding: 10px;
+    }
+    th {
+        padding: 15px;
+    }
+    td {
+        text-align: left;
+        padding: 15px;
+    }
 </style>
 <body>
     <h1>Daftar Nilai</h1>
