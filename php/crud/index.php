@@ -27,13 +27,13 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
                         <a class="nav-link link-light" href="#">Customer</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="produk.php">Produk</a>
+                        <a class="nav-link link-light" href="produk/produk.php">Produk</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="orders.php">Orders</a>
+                        <a class="nav-link link-light" href="orders/orders.php">Orders</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="kota.php">Kota</a>
+                        <a class="nav-link link-light" href="kota/kota.php">Kota</a>
                       </li>
                     </ul>
                   </div>
@@ -74,7 +74,7 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
                                 <td><?php echo $data['email']; ?></td>
                                 <td><?php echo $data['telpon']; ?></td>
                                 <td><?php echo $data['password']; ?></td>
-                                <td><a class="btn btb-success" href="edit_customer.php">Edit</td>
+                                <td><a class="btn btb-success" href="kustomer/edit_customer.php">Edit</td>
                             </tr>
                         </tbody>
                         <?php $no++; } ?>

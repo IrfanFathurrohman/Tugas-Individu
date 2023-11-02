@@ -12,26 +12,19 @@
         <div class="row">
             <div class="col-md-10 mx-auto" style="background-color: rgb(0, 0, 0);">
             <h3 class="my-5" align="center">Form Tambah Data Customer</h3>
-
-            <?php
-            // include "koneksi.php";
-            // $id = $_GET['nama_lengkap'];
-            // $customer = mysqli_query($conn,"SELECT * FROM kustomer WHERE nama_lengkap='$id'");
-            // while($data = mysqli_fetch_array($customer)){
-            ?>
                 <form action="proses_customer.php" method="post" style="margin: 100px;">
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="nama_lengkap" value="<?php echo $data['id_customer']; ?>">
+                            <input type="text" class="form-control" name="nama_lengkap">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Kota</label>
                         <div class="col-sm-8 mt-1">
-                            <select name="id_kota" value="<?php echo $data['id_customer']; ?>">
+                            <select name="id_kota">
                                 <?php
-                                include "koneksi.php";
+                                include "../koneksi.php";
                                 $query = mysqli_query($conn,"SELECT * FROM kota");
                                 while ($data = mysqli_fetch_array($query)) {
                                     echo "<option value=$data[id_kota]> $data[nama_kota]</option>";
@@ -43,31 +36,30 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Alamat</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="alamat" value="<?php echo $data['alamat']; ?>">
+                            <input type="text" class="form-control" name="alamat">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="email" value="<?php echo $data['email']; ?>">
+                            <input type="text" class="form-control" name="email">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Telpon</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="telpon" value="<?php echo $data['telpon']; ?>">
+                            <input type="text" class="form-control" name="telpon">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" name="password" value="<?php echo $data['password']; ?>">
+                            <input type="password" class="form-control" name="password">
                         </div>
                     </div>
                     
                     <button type="submit" name="submit" class="btn btn-primary" style="margin-left: 150px; margin-top: 20px; margin-bottom: 140px;">Simpan</button>
                 </form>
-                <?php  ?>
             </div>
         </div>
     </div>

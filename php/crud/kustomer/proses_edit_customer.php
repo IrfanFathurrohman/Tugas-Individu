@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "../koneksi.php";
 
 $nama = $_POST['nama_lengkap'];
 $kota = $_POST['id_kota'];

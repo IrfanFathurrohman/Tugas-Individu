@@ -1,12 +1,12 @@
 <?php 
-include "koneksi.php";
+include "../koneksi.php";
 $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = kustomer.id_kota;");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
@@ -24,16 +24,16 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
                     </a>
                     <ul class="nav justify-content-end ">
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="index.php">Customer</a>
+                        <a class="nav-link link-light" href="../index.php">Customer</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="produk.php">Produk</a>
+                        <a class="nav-link link-light" href="../produk/produk.php">Produk</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="orders.php">Orders</a>
+                        <a class="nav-link link-light" href="#">Orders</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="kota.php">Kota</a>
+                        <a class="nav-link link-light" href="../kota/kota.php">Kota</a>
                       </li>
                     </ul>
                   </div>
