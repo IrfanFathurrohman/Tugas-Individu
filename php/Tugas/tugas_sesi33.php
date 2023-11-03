@@ -22,7 +22,7 @@ echo "<br><br>NO. 3 <br>";
 $array3 = array(7, 3, 4, 9);
 $total = array_sum($array3);
 
-echo $total. "<br><br>";
+echo "Totalnya adalah ". $total. "<br><br>";
 ?>
 
 <!-- no 4 -->
