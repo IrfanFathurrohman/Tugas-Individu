@@ -13,7 +13,7 @@ for ($i=4; $i>= 0; $i--){
 echo "<br>NO. 2 ";
 $array2 = array("apel", "nanas", "mangga", "jeruk");
 
-echo "<br>". count($array2);
+echo "<br> Terdapat ". count($array2). " buah";
 ?>
 
 <!-- no 3 -->
