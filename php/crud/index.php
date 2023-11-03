@@ -41,11 +41,10 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
         </div>
 
         
-        <section id="about" style="background-color: #fff">
-          <div class="container" style="height: auto;">
+        <div class="row tabel">
             <h1 align="center"> Data Customer Toko Kue</h1>
-            
-                <a class="btn btn-primary mb-3" href="kustomer/tambah_customer.php" role="button" style="margin-left: 150px;">Tambah Data</a>
+            <div class="col-md-12 my-5 px-4">
+                <a class="btn btn-primary mb-3" href="kustomer/tambah_customer.php" role="button">Tambah Data</a>
                 <table class="table table-bordered">
                     <thead>
                         <tr style="background-color: rgb(0, 0, 0); color: white;">
@@ -53,10 +52,10 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
                             <th>Nama </th>
                             <th>Kota </th>
                             <th>Alamat </th>
-                            <!-- <th>Email </th>
+                            <th>Email </th>
                             <th>Telpon </th>
-                            <th>Password </th>-->
-                            <th>Aksi </th> 
+                            <th>Password </th>
+                            <th>Aksi </th>
                         </tr>
                     </thead>
 
@@ -71,23 +70,22 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
                             <td><?php echo $data['nama_lengkap']; ?></td>
                             <td><?php echo $data['nama_kota']; ?></td>
                             <td><?php echo $data['alamat']; ?></td>
-                            <!-- <td><?php echo $data['email']; ?></td>
+                            <td><?php echo $data['email']; ?></td>
                             <td><?php echo $data['telpon']; ?></td>
-                            <td><?php echo $data['password']; ?></td> -->
+                            <td><?php echo $data['password']; ?></td>
                             <td><a class="btn btb-success" href="kustomer/edit_customer.php?id_kustomer=<?php echo $data["id_kustomer"]; ?>">Edit</td>
                         </tr>
                     </tbody>
                     <?php $no++; } ?>
                 </table>
-          </div>
-        </section>
-     
+            </div>
+        </div>
 
         
         
-      <footer class="text-center pb-2 pt-4" style="background-color: #9cdbd6; ">
-        <p>Created by <a href="https//instagram.com" class="fw-bold" >Nura Bela</a></p>
-      </footer>
+        <div class="row">
+          <div class="col-12 text-center">Footer</div>
+        </div>
 
       </div>
     </div>

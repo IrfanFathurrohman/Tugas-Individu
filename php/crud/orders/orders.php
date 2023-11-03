@@ -45,8 +45,8 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
             <div class="row tabel">
                 <h1 align="center"> Data Orderan Toko Kue</h1>
                 <div class="col-md-12 my-5 px-4">
-                    <a class="btn btn-primary mb-3" href="tambah_customer.php" role="button" style="margin-left: 150px;">Tambah Data</a>
-                    <table border="1" cellspacing="0" align="center">
+                    <a class="btn btn-primary mb-3" href="tambah_customer.php" role="button">Tambah Data</a>
+                    <table class="table table-bordered">
                         <thead>
                             <tr style="background-color: rgb(0, 0, 0); color: white;">
                                 <th>No </th>

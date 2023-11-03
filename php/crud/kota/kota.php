@@ -29,7 +29,7 @@ $query = mysqli_query($conn,"SELECT * FROM kota");
                     </a>
                     <ul class="nav justify-content-end ">
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="../kustomer.php">Customer</a>
+                        <a class="nav-link link-light" href="../kustomer/kustomer.php">Customer</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link link-light" href="../produk/produk.php">Produk</a>
@@ -50,8 +50,8 @@ $query = mysqli_query($conn,"SELECT * FROM kota");
             <div class="row tabel">
                 <h1 align="center"> Data Customer Toko Kue</h1>
                 <div class="col-md-12 my-5 px-4 tabel-kota">
-                    <a class="btn btn-primary mb-3" href="tambah_kota.php" role="button" style="margin-left: 150px;">Tambah Data</a>
-                    <table border="1" cellspacing="0" align="center">
+                    <a class="btn btn-primary mb-3" href="tambah_kota.php" role="button">Tambah Data</a>
+                    <table class="table table-bordered">
                         <thead>
                             <tr style="background-color: rgb(0, 0, 0); color: white; padding: 50px;">
                                 <th>No </th>
