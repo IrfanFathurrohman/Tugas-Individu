@@ -10,6 +10,6 @@ $password = $_POST['password'];
 
 $result = mysqli_query($conn, "INSERT INTO kustomer(`nama_lengkap`, `id_kota`, `alamat`, `email`, `telpon`, `password`) VALUES ('$nama', '$kota', '$alamat', '$email', '$telpon', '$password');");
 
-header("Location:index.php");
+header("Location:../index.php");
 
 ?>

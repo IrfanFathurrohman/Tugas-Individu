@@ -14,54 +14,55 @@
             <h3 class="my-5" align="center">Form Tambah Data Customer</h3>
 
             <?php
-            // include "../koneksi.php";
-            // $id = $_GET['nama_lengkap'];
-            // $customer = mysqli_query($conn,"SELECT * FROM kustomer WHERE nama_lengkap='$id'");
-            // while($data = mysqli_fetch_array($customer)){
+            include "../koneksi.php";
+            $id_kustomer = $_GET['id_kustomer'];
+
+            $customer = mysqli_query($conn,"SELECT * FROM kustomer WHERE id_kustomer='$id_kustomer'");
+            while($data = mysqli_fetch_array($customer)){
+                $nama_lengkap = $data['nama_lengkap'];
+                $id_kota = $data['id_kota'];    
+                $alamat = $data['alamat'];
+                $email = $data['email'];
+                $telpon = $data['telpon'];
+                $password = $data['password'];
+
+            }
             ?>
-                <form action="proses_customer.php" method="post" style="margin: 100px;">
+                <form action="proses_edit_customer.php?id_kustomer=<?php echo $id_kustomer; ?>" method="post" style="margin: 100px;">
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="nama_lengkap" value="<?php echo $data['id_customer']; ?>">
+                            <input type="text" class="form-control" name="nama_lengkap" value="<?php echo $nama_lengkap; ?>">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Kota</label>
                         <div class="col-sm-8 mt-1">
-                            <select name="id_kota" value="<?php echo $data['id_customer']; ?>">
-                                <?php
-                                include "../koneksi.php";
-                                $query = mysqli_query($conn,"SELECT * FROM kota");
-                                while ($data = mysqli_fetch_array($query)) {
-                                    echo "<option value=$data[id_kota]> $data[nama_kota]</option>";
-                                }
-                                ?>
-                            </select>
+                            <input type="text" class="form-control" name="id_kota" value="<?php echo $id_kota; ?>">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Alamat</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="alamat" value="<?php echo $data['alamat']; ?>">
+                            <input type="text" class="form-control" name="alamat" value="<?php echo $alamat; ?>">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="email" value="<?php echo $data['email']; ?>">
+                            <input type="text" class="form-control" name="email" value="<?php echo $email; ?>">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Telpon</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="telpon" value="<?php echo $data['telpon']; ?>">
+                            <input type="text" class="form-control" name="telpon" value="<?php echo $telpon; ?>">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" name="password" value="<?php echo $data['password']; ?>">
+                            <input type="password" class="form-control" name="password" value="<?php echo $password; ?>">
                         </div>
                     </div>
                     
