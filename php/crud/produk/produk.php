@@ -1,6 +1,6 @@
 <?php 
 include "../koneksi.php";
-$query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = kustomer.id_kota;");
+$query = mysqli_query($conn,"SELECT * FROM produk INNER JOIN kategori ON kategori.id_kategori = produk.id_kategori;");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,18 +19,15 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
               <div class="col-md-12">
                 <nav class="navbar">
                   <div class="container-fluid">
-                    <a class="navbar-brand link-light ms-2" href="#">
-                      LOGO
+                    <a class="navbar-brand link-light ms-2" href="../index.php">
+                      HOME
                     </a>
                     <ul class="nav justify-content-end ">
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="../index.php">Customer</a>
+                        <a class="nav-link link-light" href="../kustomer/kustomer.php">Customer</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link-light" href="#">Produk</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link link-light" href="../orders/orders.php">Orders</a>
+                        <a class="nav-link link-light" href="produk.php">Produk</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link link-light" href="../kota/kota.php">Kota</a>
@@ -42,20 +39,20 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
             </div>
 
             
-            <div class="row tabel">
+            <div class="row tabel" >
                 <h1 align="center"> Data Produk Toko Kue</h1>
-                <div class="col-md-12 my-5 px-4">
-                    <a class="btn btn-primary mb-3" href="tambah_kota.php" role="button" style="margin-left: 150px;">Tambah Data</a>
-                    <table border="1" cellspacing="0" align="center">
+                <div class="col-md-12 my-5 px-4" style="height: 700px;">
+                    <a class="btn btn-primary mb-3" href="tambah_produk.php" role="button">Tambah Data</a>
+                    <table class="table table-bordered">
                         <thead>
-                            <tr style="background-color: rgb(0, 0, 0); color: white;">
+                            <tr style="background-color: rgb(0, 0, 0); color: white; text-align: center;">
                                 <th>No </th>
-                                <th>Nama </th>
-                                <th>Kota </th>
-                                <th>Alamat </th>
-                                <th>Email </th>
-                                <th>Telpon </th>
-                                <th>Password </th>
+                                <th>Nama Produk </th>
+                                <th>Kategori </th>
+                                <th>Harga </th>
+                                <th>Stok </th>
+                                <th>Tanggal masuk </th>
+                                <th>Aksi </th>
                             </tr>
                         </thead>
 
@@ -65,14 +62,17 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
                         ?>
 
                         <tbody>
-                            <tr>
+                            <tr style="text-align: center;">
                                 <td><?php echo $no;?></td>
-                                <td><?php echo $data['nama_lengkap']; ?></td>
-                                <td><?php echo $data['nama_kota']; ?></td>
-                                <td><?php echo $data['alamat']; ?></td>
-                                <td><?php echo $data['email']; ?></td>
-                                <td><?php echo $data['telpon']; ?></td>
-                                <td><?php echo $data['password']; ?></td>
+                                <td><?php echo $data['nama_produk']; ?></td>
+                                <td><?php echo $data['nama_kategori']; ?></td>
+                                <td><?php echo $data['harga']; ?></td>
+                                <td><?php echo $data['stok']; ?></td>
+                                <td><?php echo $data['tgl_masuk']; ?></td>
+                                <td>
+                                  <a class="btn btn-success" href="edit_produk.php?id_produk=<?php echo $data["id_produk"]; ?>">Edit</a>
+                                  <a onclick="return confirm('Yakin Hapus?');" class="btn btn-danger alert_notif" href="hapus.php?id_produk=<?php echo $data["id_produk"]; ?>">Hapus</a>
+                                </td>
                                 
                             </tr>
                         </tbody>

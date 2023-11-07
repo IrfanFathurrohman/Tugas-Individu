@@ -22,9 +22,10 @@
                 $nama_lengkap = $data['nama_lengkap'];
                 $id_kota = $data['id_kota'];    
                 $alamat = $data['alamat'];
+                $pas = $data['password'];
                 $email = $data['email'];
                 $telpon = $data['telpon'];
-                $password = $data['password'];
+                
 
             }
             ?>
@@ -38,7 +39,15 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Kota</label>
                         <div class="col-sm-8 mt-1">
-                            <input type="text" class="form-control" name="id_kota" value="<?php echo $id_kota; ?>">
+                            <select name="id_kota">
+                                <?php
+                                include "../koneksi.php";
+                                $query = mysqli_query($conn,"SELECT * FROM kota");
+                                while ($data = mysqli_fetch_array($query)) {
+                                    echo "<option value=$data[id_kota]> $data[nama_kota]</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -62,7 +71,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" name="password" value="<?php echo $password; ?>">
+                            <input type="password" class="form-control" name="password" value="<?php echo $pas; ?>">
                         </div>
                     </div>
                     
