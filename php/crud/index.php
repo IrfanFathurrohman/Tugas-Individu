@@ -8,9 +8,6 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-      
-    </style>
 </head>
 <body style="background-color: rgb(77, 77, 77);">
     <div class="container" >
@@ -40,9 +37,7 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
                       </div>
                     </nav>    
                   </div>   
-                </div>
-
-                
+                </div> 
                 <div class="row tabel" style="height: 900px;">
                     <div class="col-md-6 my-5 px-4">
                         <img src="kue.jpg" style="width: 500px;">
