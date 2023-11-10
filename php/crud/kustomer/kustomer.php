@@ -5,6 +5,9 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"/>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -43,7 +46,7 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
                     <h1 align="center"> Data Customer Toko Kue</h1>
                     <div class="col-sm-12 my-5 px-4" style="height: 700px;">
                         <a class="btn btn-primary mb-3" href="tambah_customer.php" role="button">Tambah Data</a>
-                        <table class="table table-bordered table-responsive">
+                        <table id="data" class="display">
                             <thead>
                                 <tr style="background-color: rgb(0, 0, 0); color: white; text-align: center;">
                                     <th>No </th>
@@ -63,7 +66,7 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
                             ?>
 
                             <tbody>
-                                <tr style="text-align: center;">
+                                <tr>
                                     <td><?php echo $no;?></td>
                                     <td><?php echo $data['nama_lengkap']; ?></td>
                                     <td><?php echo $data['nama_kota']; ?></td>
@@ -92,3 +95,9 @@ $query = mysqli_query($conn,"SELECT * FROM kustomer JOIN kota ON kota.id_kota = 
     </div>
 </body>
 </html>
+
+<script type="text/javascript">
+      $(document).ready(function(){
+        $('#data').DataTable();
+    });
+</script>
